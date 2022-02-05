@@ -31,4 +31,4 @@ steps:
     releaseTrack: 'TestFlight'
     distributeOnly: true
     appIdentifier: 'hadeer.myioshello'
-    
+    fastlaneArguments: 'fastlane spaceauth -u hadora_12@icloud.com'
