@@ -21,6 +21,7 @@ steps:
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'certificate.p12'
+    certPwd: 'Hadora1998'
     keychain: 'temp'
 - task: AppStoreRelease@1
   inputs:
