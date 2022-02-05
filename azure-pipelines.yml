@@ -25,9 +25,10 @@ steps:
     certPwd: 'Hadora1998'
     keychain: 'temp'
 
-- task: AppStorePromote@1
+- task: AppStoreRelease@1
   inputs:
     serviceEndpoint: 'app-store-connection'
+    releaseTrack: 'TestFlight'
+    distributeOnly: true
     appIdentifier: 'hadeer.myioshello'
-    shouldAutoRelease: true
     fastlaneArguments: 'fastlane spaceauth -u hadora_12@icloud.com'
