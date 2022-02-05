@@ -18,15 +18,16 @@ steps:
     configuration: 'Release'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, 11, 12, default, specifyPath
+
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'certificate.p12'
     certPwd: 'Hadora1998'
     keychain: 'temp'
-- task: AppStoreRelease@1
+
+- task: AppStorePromote@1
   inputs:
     serviceEndpoint: 'app-store-connection'
-    releaseTrack: 'TestFlight'
-    distributeOnly: true
     appIdentifier: 'hadeer.myioshello'
-
+    shouldAutoRelease: true
+    fastlaneArguments: 'fastlane spaceauth -u hadora_12@icloud.com'
