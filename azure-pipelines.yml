@@ -24,7 +24,10 @@ steps:
     certSecureFile: 'certificate.p12'
     certPwd: 'Hadora1998'
     keychain: 'temp'
-
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'provprofile.mobileprovision'
 - task: AppStoreRelease@1
   inputs:
     serviceEndpoint: 'app-store-connection'
